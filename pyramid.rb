@@ -1,7 +1,11 @@
 # pyramid.rb
 def build_pyramid(width)
   pyramid = ""
-  height = width / 2
+  if width % 2 == 0
+    height = width / 2
+  else
+    height = width / 2 + 1
+  end
 
   height.times do |h|
     # Add the spaces for this line
